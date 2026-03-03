@@ -1,0 +1,899 @@
+<!Doctype html>
+<html lang="pt-br">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tabela Verdade na Programação</title>
+</head>
+
+<body>
+<header>
+      <h1> Tabela Verdade e Seus Conectivos </h1>
+</header>
+      <p> A <b> Tabela Verdade </b> é uma ferramenta da lógica matemática utilizada para determinar o valor lógico de uma proposição, ou seja, se ela é verdadeira ou falsa. Ela organiza todas as possíveis combinações de valores lógicos das proposições envolvidas e, por meio dos conectivos lógicos, permite analisar o resultado de expressões lógicas. </p>
+
+      <h2> Tópicos utilizados </h2>
+<nav>
+      <ul>
+            <li><a href="#criação" target="_self">Como criar a tabela verdade</a></li>
+            <li><a href="#conectivos" target="_self">Conectivos Lógicos</a></li>
+              <ul>
+                <li><a href="#negação" target="_self">Tabela Verdade Negação</a></li>
+                <li><a href="#conjunção" target="_self">Tabela Verdade Conjunção</a></li>
+                <li><a href="#disjunçãoinclusiva" target="_self">Tabela Verdade Disjunção Inclusiva</a></li>
+                <li><a href="#disjunçãoexclusiva" target="_self">Tabela Verdade Disjunção Exclusiva</a></li>
+                <li><a href="#condicional" target="_self">Tabela Verdade Condicional</a></li>
+                <li><a href="#bicondicional" target="_self">Tabela Verdade Bicondicional</a></li>
+              </ul>
+            <li><a href="#exemplos" target="_self">Exemplos Práticos</a></li>
+            <li><a href="#exercicios" target="_self">Exercícios</a></li>
+
+      </ul>
+</nav>
+
+<section id="criação">
+      <h3> Como criar a tabela verdade </h3>
+          <p> Para a criação da Tabela Verdade utilizamos as letras <b>V</b> para verdadeiro e <b>F</b> para Falso. A quantidade de V e F utilizados na tabela depende de quantas sentenças possuirá a proposição. Vamos utilizar o 2<sup>n</sup> para criar a quantidade de linhas da nossa tabela, onde o <b>n</b> será responsável pela quantidade da sentença. Por Exemplo: Se tivermos 2 sentenças simples ficará: 2<sup>2</sup>=2.2=4 linhas ou se tiver 3 sentenças:2<sup>3</sup>=2.2.2=8 linhas.</p>
+<p>Veja como funciona na tabela com duas sentenças representadas por <b>p</b> e <b>q</b>:</p>
+
+<div class="tabela">
+      <table>
+            <tbody>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+            </tbody>
+      </table>
+</div>
+<p>Agora com 3 sentenças representadas por <b>p</b>,<b>q</b> e <b>r</b>:</p>
+
+<div class="tabela">
+      <table>
+            <tbody>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>r</th>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+            </tbody>
+      </table>
+</div>
+
+<p>Note que a construção dela é padrão, sempre inicie com V e depois F, respeitando a regra de que a primeira coluna segue com a metade da quantidade de linhas em V e depois a outra metade com F, e a próxima coluna na mesma lógica, so que em relação a coluna anterior, e assim até acabarem as colunas.</p>       
+</section>
+<section id="conectivos">
+      <h3> Conectivos Lógicos </h3>
+          <p>Os principais conectivos lógicos utilizados são:
+negação (~), conjunção (&and;), disjunção inclusiva (&or;), disjunção exclusiva (<span style="text-decoration: underline;">V</span>), condicional (&rarr;) e bicondicional (&harr;). Vamos entender agora como cada um deles é aplicado na tabela Verdade.</p>
+</section>
+<div class="tabela">
+      <table>
+            <tbody id="especific">
+                <tr>
+                    <th>Conectivo</th>
+                    <th>Símbolo</th>
+                    <th>Operação Lógica</th>
+                    <th>Significado</th>
+                </tr>
+                <tr>
+                    <td>não</td>
+                    <td>~</td>
+                    <td>negação</td>
+                    <td>Terá valor falso se a proposição for verdadeira e tera valor veradadeiro se a proposição for falsa</td>
+                </tr>
+                <tr>
+                    <td>e</td>
+                    <td>&and;</td>
+                    <td>conjunção</td>
+                    <td>Terá valor verdadeiro quando todas as proposições forem somente verdadeiras</td>
+                </tr>
+                <tr>
+                    <td>ou</td>
+                    <td>&or;</td>
+                    <td>disjunção inclusiva</td>
+                    <td>Terá valor falso quando as duas proposições forem falsas</td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>ou...ou</td>
+                    <td><span style="text-decoration: underline;">V</span></td>
+                    <td>disjunção exclusiva</td>
+                    <td>Terá valor falso se as duas proposições forem iguais e verdadeiro se forem diferentes</td>
+                </tr>
+                <tr>
+                    <td>se...então</td>
+                    <td>&rarr;</td>
+                    <td>condicional</td>
+                    <td>Terá valor falso se a primeira for verdadeira e a segunda for falsa</td>
+                </tr>
+                <tr>
+                    <td>...se e somente se...</td>
+                    <td>&harr;</td>
+                    <td>bicondicional</td>
+                    <td>Terá valor verdadeiro quando ambas forem verdadeiras ou ambas forem falsas</td>
+                </tr>                        
+            </tbody>
+      </table>
+</div>
+</section>
+
+<section id="negação">
+<h3>Tabela Verdade Negação</h3>
+<p> Dado a proposição <em>p</em> e <em>q</em> representado na negação por <em>~p</em> e <em>~q</em> é o contrário do seu respectivo valor lógico. </p>
+
+<div class="tabela">
+      <table>
+            <tbody>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>~p</th>
+                    <th>~q</th>
+                </tr>
+                  <tr>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>V</td>
+                </tr>
+            </tbody>
+      </table>
+</div>
+</section>
+
+<section id="conjunção">
+<h3>Tabela Verdade Conjunção</h3>
+<p> Dado a proposição <em>p</em> e <em>q</em> representado por <em>p&and;q</em>. </p>
+<div class="tabela">
+      <table>
+            <tbody>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>p&and;q</th>
+                </tr>
+                  <tr>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+            </tbody>
+      </table>
+</div>
+</section>
+
+<section id="disjunçãoinclusiva">
+<h3>Tabela Verdade Disjunção Inclusiva</h3>
+<p> Dado a proposição <em>p</em> e <em>q</em> representado por <em>p&or;q</em>. </p>
+<div class="tabela">
+      <table>
+            <tbody>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>p&or;q</th>
+                </tr>
+                  <tr>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+            </tbody>
+      </table>
+</div>
+</section>
+
+<section id="disjunçãoexclusiva">
+<h3>Tabela Verdade Disjunção Exclusiva</h3>
+<p> Dado a proposição <em>p</em> e <em>q</em> representado por <em>p<span style="text-decoration: underline;">V</span>q</em>. </p>
+<div class="tabela">
+      <table>
+            <tbody>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>p<span style="text-decoration: underline;">V</span>q</th>
+                </tr>
+                  <tr>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+            </tbody>
+      </table>
+</div>
+</section>
+
+<section id="condicional">
+<h3>Tabela Verdade Condicional</h3>
+<p> Dado a proposição <em>p</em> e <em>q</em> representado por <em>p&rarr;q</em>. </p>
+<div class="tabela">
+      <table>
+            <tbody>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>p&rarr;q</th>
+                </tr>
+                  <tr>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>V</td>
+                </tr>
+            </tbody>
+      </table>
+</div>
+</section>
+
+<section id="bicondicional">
+<h3>Tabela Verdade Bicondicional</h3>
+<p> Dado a proposição <em>p</em> e <em>q</em> representado por <em>p&harr;q</em>. </p>
+<div class="tabela">
+      <table>
+            <tbody>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>p&harr;q</th>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>V</td>
+                </tr>
+            </tbody>
+      </table>
+</div>
+</section>
+
+<section id="exemplos">
+<h3>Exemplos Práticos</h3>
+<p>Vamos praticar agora com alguns exemplos de sentenças e resoluções.</p>
+<p>1) Dado a sentença ~(p&and;q) vamos montar a tabela verdade</p>
+<p>primeiro passo é notar que existe uma sentença entre parenteses,igual na matemática, tudo o que esta entre parenteses é resolvido primeiro</p>
+<div class="tabela">
+      <table>
+            <tbody>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>p&and;q</th>
+                    <th>~p&and;q</th>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>F</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>F</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>F</td>
+                    <td></td>
+                </tr>
+            </tbody>
+      </table>
+</div>
+<p>Agora que resolvemos a primeira parte, que é a <em>conjunção</em> da nossa sentença, vamos pegar o resultado da ultima coluna de resolução e aplicar o próximo conectivo que é o de <em>negação</em>, ou seja, vamos inverter a nossa ultima coluna</p>
+<div class="tabela">
+      <table>
+            <tbody>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>p&and;q</th>
+                    <th>~p&and;q</th>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>V</td>
+                </tr>
+            </tbody>
+      </table>
+</div>
+<p> Note que a maneira de resolver as proposições são as mesmas vistas anteriormente, a diferença é que vamos trabalhando com cada um dos conectivos separadamente, seja ele resultado de outra proposição ou não.</p>
+<p>2) Dado a sentença (p&or;q)&rarr;(p&and;q) vamos montar a tabela verdade</p>
+<div class="tabela">
+      <table>
+            <tbody>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>p&or;q</th>
+                    <th>p&and;q</th>
+                    <th>(p&or;q)&rarr;(p&and;q)</th>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>V</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>F</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+      </table>
+</div>
+<p>Resolvemos o primeiro parenteses, agora vamos para o outro parentenses</p>
+<div class="tabela">
+      <table>
+            <tbody>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>p&or;q</th>
+                    <th>p&and;q</th>
+                    <th>(p&or;q)&rarr;(p&and;q)</th>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>F</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>F</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>F</td>
+                    <td></td>
+                </tr>
+            </tbody>
+      </table>
+</div>
+<p>Resolvemos o segundo parenteses, vamos pegar o resultado destas duas proposições e aplicar no conectivo que esta fora do parenteses</p>
+<div class="tabela">
+      <table>
+            <tbody>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>p&or;q</th>
+                    <th>p&and;q</th>
+                    <th>(p&or;q)&rarr;(p&and;q)</th>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>V</td>
+                </tr>
+            </tbody>
+      </table>
+</div>
+</section>
+
+<section id="exercicios">
+<h3>Exercícios</h3>
+<p>Agora que você ja esta sabe como resolver as sentenças, responda as perguntas abaixo</p>
+<div class="quiz">
+
+    <!-- Pergunta 1 -->
+    <div class="pergunta">
+        <h4>1) Quantas linhas terá uma tabela verdade com 3 proposições simples?</h4>
+
+        <input type="radio" id="q1a" name="q1">
+        <label for="q1a">4 linhas</label>
+
+        <input type="radio" id="q1b" name="q1">
+        <label for="q1b">6 linhas</label>
+
+        <input type="radio" id="q1c" name="q1" class="correta">
+        <label for="q1c">8 linhas</label>
+
+        <input type="radio" id="q1d" name="q1">
+        <label for="q1d">16 linhas</label>
+
+        <div class="feedback"></div>
+    </div>
+
+    <!-- Pergunta 2 -->
+    <div class="pergunta">
+        <h4>2) Quando a conjunção (p ∧ q) é verdadeira?</h4>
+
+        <input type="radio" id="q2a" name="q2">
+        <label for="q2a">Quando pelo menos uma for verdadeira</label>
+
+        <input type="radio" id="q2b" name="q2" class="correta">
+        <label for="q2b">Quando ambas forem verdadeiras</label>
+
+        <input type="radio" id="q2c" name="q2">
+        <label for="q2c">Quando ambas forem falsas</label>
+
+        <input type="radio" id="q2d" name="q2">
+        <label for="q2d">Quando forem diferentes</label>
+
+        <div class="feedback"></div>
+    </div>
+
+    <!-- Pergunta 3 -->
+    <div class="pergunta">
+        <h4>3) A disjunção inclusiva (p ∨ q) será falsa quando:</h4>
+
+        <input type="radio" id="q3a" name="q3">
+        <label for="q3a">Ambas forem verdadeiras</label>
+
+        <input type="radio" id="q3b" name="q3">
+        <label for="q3b">Apenas uma for verdadeira</label>
+
+        <input type="radio" id="q3c" name="q3" class="correta">
+        <label for="q3c">Ambas forem falsas</label>
+
+        <input type="radio" id="q3d" name="q3">
+        <label for="q3d">Sempre será verdadeira</label>
+
+        <div class="feedback"></div>
+    </div>
+
+    <!-- Pergunta 4 -->
+    <div class="pergunta">
+        <h4>4) A condicional (p → q) será falsa quando:</h4>
+
+        <input type="radio" id="q4a" name="q4">
+        <label for="q4a">p for falsa e q verdadeira</label>
+
+        <input type="radio" id="q4b" name="q4" class="correta">
+        <label for="q4b">p for verdadeira e q falsa</label>
+
+        <input type="radio" id="q4c" name="q4">
+        <label for="q4c">Ambas forem verdadeiras</label>
+
+        <input type="radio" id="q4d" name="q4">
+        <label for="q4d">Ambas forem falsas</label>
+
+        <div class="feedback"></div>
+    </div>
+
+    <!-- Pergunta 5 -->
+    <div class="pergunta">
+        <h4>5) A bicondicional (p ↔ q) será verdadeira quando:</h4>
+
+        <input type="radio" id="q5a" name="q5">
+        <label for="q5a">Apenas uma for verdadeira</label>
+
+        <input type="radio" id="q5b" name="q5" class="correta">
+        <label for="q5b">Ambas forem verdadeiras ou ambas falsas</label>
+
+        <input type="radio" id="q5c" name="q5">
+        <label for="q5c">Sempre que p for verdadeira</label>
+
+        <input type="radio" id="q5d" name="q5">
+        <label for="q5d">Sempre que q for falsa</label>
+
+        <div class="feedback"></div>
+    </div>
+
+</div>
+
+</section>
+
+    <style>
+        body {
+            font-family: optima;
+            font-size: 20px;
+}
+        header {
+            background-color: #ADD8E6;
+            color: black;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+}
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+
+}
+
+	#specific{
+        width: 200px;
+}
+        table th{
+            background-color: #A3E4D7;
+
+}
+        table td{
+            background-color: #F0FFF0;
+
+}
+        table {
+            width: 20%;
+            border-collapse: collapse;
+            text-align: center;
+
+}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #1e1e1e; 
+            color: #e0e0e0; 
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c2c2c;
+            color: #bb86fc;
+            padding: 20px;
+            border-bottom: 3px solid #7b2cbf;
+        }
+
+        h1, h2, h3 {
+            color: #bb86fc; 
+        }
+
+        p {
+            width: 70%;
+            margin: 15px auto;
+            line-height: 1.6;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 5px 0;
+        }
+
+        nav a {
+            color: #d0aaff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .tabela {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #7b2cbf;
+            padding: 8px 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3a0ca3; 
+        }
+
+        td {
+            background-color: #2c2c2c;
+        }
+
+        table th {
+        background-color: #8627df;
+        }
+
+        table td {
+            background-color: #292929;
+        }
+
+.quiz {
+    width: 70%;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.pergunta {
+    background-color: #2c2c2c;
+    border: 2px solid #7b2cbf;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.pergunta:hover {
+    border-color: #bb86fc;
+    transform: scale(1.02);
+}
+
+.pergunta h4 {
+    color: #bb86fc;
+    margin-bottom: 15px;
+}
+
+.pergunta label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.pergunta label:hover {
+    background-color: #3a0ca3;
+}
+
+.pergunta input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #bb86fc;
+}
+
+/* ===== CORREÇÃO AUTOMÁTICA ===== */
+
+.pergunta input[type="radio"] {
+    display: none;
+}
+
+.pergunta label {
+    display: block;
+    background-color: #2c2c2c;
+    border: 1px solid #7b2cbf;
+    padding: 8px;
+    margin: 6px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pergunta label:hover {
+    background-color: #3a0ca3;
+}
+
+/* Resposta correta */
+.pergunta input.correta:checked + label {
+    background-color: #1b5e20;
+    border-color: #00ff88;
+    color: #00ff88;
+}
+
+/* Resposta errada */
+.pergunta input:not(.correta):checked + label {
+    background-color: #5e1b1b;
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+}
+    </style>
+</body>
+
+</html>
