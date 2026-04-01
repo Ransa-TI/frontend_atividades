@@ -1,0 +1,90 @@
+body {
+     margin: 0;
+     height: 200vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+     background-image: url("./imgs/b_ceu.png");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+ }
+
+ .btnFundo {
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     padding: 15px 20px;
+     font-size: 22px;
+     cursor: pointer;
+     border-radius: 10px;
+     border: none;
+     z-index: 9999;
+ }
+
+ .btnFundo:active {
+     background-color: gray;
+ }
+
+ #alimento{
+    width: 800px;
+ }
+
+ .btnMusica {
+     position: absolute;
+     top: 100px;
+     right: 20px;
+     padding: 15px 20px;
+     font-size: 22px;
+     cursor: pointer;
+     border-radius: 10px;
+     border: none;
+     z-index: 9999;
+ }
+
+ .btnMusica:active {
+     background-color: gray;
+ }
+
+ .btnMalhando {
+     position: absolute;
+     top: 180px;
+     right: 20px;
+     padding: 15px 20px;
+     font-size: 22px;
+     cursor: pointer;
+     border-radius: 10px;
+     border: none;
+     z-index: 9999;
+ }
+
+  .btnRoupa {
+     position: absolute;
+     top: 260px;
+     right: 20px;
+     padding: 15px 20px;
+     font-size: 22px;
+     cursor: pointer;
+     border-radius: 10px;
+     border: none;
+     z-index: 9999;
+ }
+ .topo {
+     margin-top: 40px;
+     display: flex;
+     justify-content: center;
+     width: 100%;
+ }
+
+ .topo img {
+     width: 1000px;
+ }
+
+ body.ceu {
+     background-image: url("./imgs/b_ceu.png");
+ }
+
+ body.inferno {
+     background-image: url("./imgs/b_inferno.png");
+ }
