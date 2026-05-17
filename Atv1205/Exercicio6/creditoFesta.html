@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Bank - Orçamento de Eventos</title>
+    <link rel="stylesheet" href="./creditoFesta.css">
+</head>
+<body>
+
+    <div class="card-orcamento">
+        <div class="header-orcamento">
+            <h2>Orçamento de Eventos</h2>
+            <p>Simulador de Orçamento para Eventos</p>
+        </div>
+
+        <form id="formOrcamento">
+            <div class="grupo-input">
+                <label for="pacote">Selecione o Pacote</label>
+                <select id="pacote" required>
+                    <option value="" disabled selected>Escolha uma opção</option>
+                    <option value="standard">Standard (R$ 50,00 / pessoa)</option>
+                    <option value="premium">Premium (R$ 80,00 / pessoa)</option>
+                    <option value="deluxe">Infinity Deluxe (R$ 120,00 / pessoa)</option>
+                </select>
+            </div>
+
+            <div class="grupo-input">
+                <label for="quantidade">Quantidade de Pessoas</label>
+                <input type="number" id="quantidade" placeholder="Ex: 50" min="1" required>
+            </div>
+
+            <button type="button" id="btnCalcular">Calcular Orçamento</button>
+            <button type="button" id="btnLimpar" class="btn-secundario">Limpar Campos</button>
+        </form>
+
+        <div class="resultado-container id-escondido" id="resultado">
+            <h3>Resumo do Orçamento</h3>
+            <div class="linha-resumo">
+                <span>Custo Bruto:</span>
+                <strong id="resCustoBruto">R$ 0,00</strong>
+            </div>
+            <div class="linha-resumo">
+                <span>Taxa de Serviço (10%):</span>
+                <strong id="resTaxaServico">R$ 0,00</strong>
+            </div>
+            <div class="linha-resumo desconto">
+                <span>Desconto Fidelidade (5%):</span>
+                <strong id="resDesconto">R$ 0,00</strong>
+            </div>
+            <hr>
+            <div class="linha-resumo total">
+                <span>Total Final:</span>
+                <strong id="resTotalFinal">R$ 0,00</strong>
+            </div>
+        </div>
+    </div>
+
+    <script src="./creditoFesta.js"></script>
+</body>
+</html>

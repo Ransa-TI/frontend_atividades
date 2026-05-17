@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Bank - Analisador de Cartões</title>
+    <link rel="stylesheet" href="./Validador.css">
+</head>
+<body>
+
+    <div class="card-validador">
+        <div class="header-validador">
+            <h2>Infinity Bank</h2>
+            <p>Análise Avançada de Cartões (IIN / ISO)</p>
+        </div>
+
+        <form id="formValidador">
+            <div class="grupo-input">
+                <label for="numeroCartao">Número do Cartão de Crédito</label>
+                <input type="text" id="numeroCartao" placeholder="0000 0000 0000 0000" maxlength="19" required>
+            </div>
+
+            <button type="button" id="btnAnalisar">Analisar Cartão</button>
+            <button type="button" id="btnLimpar" class="btn-secundario">Limpar</button>
+        </form>
+
+        <div class="resultado-container id-escondido" id="resultado">
+            <h3>Painel de Informações Técnicas</h3>
+            
+            <div class="linha-resumo">
+                <span>Status de Validação:</span>
+                <strong id="resStatus">-</strong>
+            </div>
+            <div class="linha-resumo">
+                <span>Bandeira (IIN):</span>
+                <strong id="resBandeira">-</strong>
+            </div>
+            <div class="linha-resumo">
+                <span>Setor Industrial (MII):</span>
+                <strong id="resSetor">-</strong>
+            </div>
+            <div class="linha-resumo">
+                <span>Banco Emissor Estimado:</span>
+                <strong id="resEmissor">-</strong>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Validados.js"></script>
+</body>
+</html>

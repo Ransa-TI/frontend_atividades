@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Bank - Simulador de Vendas</title>
+    <link rel="stylesheet" href="./taxasBank.css">
+</head>
+<body>
+
+    <div class="card-simulador">
+        <div class="header-simulador">
+            <h2>Infinity Bank</h2>
+            <p>Simulador de Vendas e Parcelamento</p>
+        </div>
+
+        <form id="formSimulador">
+            <div class="grupo-input">
+                <label for="valorVenda">Valor da Venda (R$)</label>
+                <input type="number" id="valorVenda" placeholder="0,00" step="0.01" required>
+            </div>
+
+            <div class="grupo-input">
+                <label for="bandeira">Bandeira do Cartão</label>
+                <select id="bandeira" required>
+                    <option value="" disabled selected>Selecione a bandeira</option>
+                    <option value="visa">Visa (2,00%)</option>
+                    <option value="master">Mastercard (1,85%)</option>
+                    <option value="elo">Elo (3,00%)</option>
+                </select>
+            </div>
+
+            <div class="grupo-input">
+                <label for="parcelas">Número de Parcelas</label>
+                <input type="number" id="parcelas" placeholder="Ex: 5" min="1" max="12" required>
+            </div>
+
+            <button type="button" id="btnSimular">Calcular Simulação</button>
+            <button type="button" id="btnLimpar" class="btn-secundario">Limpar Dados</button>
+        </form>
+
+        <div class="resultado-container id-escondido" id="resultado">
+            <h3>Resumo da Simulação</h3>
+            <div class="linha-resumo">
+                <span>Taxa da Bandeira:</span>
+                <strong id="resTaxa">R$ 0,00</strong>
+            </div>
+            <div class="linha-resumo">
+                <span>Juros Totais:</span>
+                <strong id="resJuros">R$ 0,00</strong>
+            </div>
+            <div class="linha-resumo">
+                <span>Taxa Mensal Fixa Total:</span>
+                <strong id="resTaxaFixa">R$ 0,00</strong>
+            </div>
+            <hr>
+            <div class="linha-resumo total">
+                <span>Valor de cada Parcela:</span>
+                <strong id="resParcela">R$ 0,00</strong>
+            </div>
+            <div class="linha-resumo total-geral">
+                <span>Valor Total da Operação:</span>
+                <strong id="resTotal">R$ 0,00</strong>
+            </div>
+        </div>
+    </div>
+
+    <script src="./taxasBank.js"></script>
+</body>
+</html>
